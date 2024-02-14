@@ -132,7 +132,7 @@ button {
     overflow: hidden;
     vertical-align: middle;
     transition: color 0.3s ease;
-    box-shadow: 2px 2px 5 px rgba(0, 0, 0, 0.40);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.40);
 }
 
 .btn::before,
@@ -330,7 +330,7 @@ button {
     }
 }
 
-/* initial commit is done up to here  */
+/* --------------header section------------   */
 
 .header {
     position: absolute;
@@ -346,7 +346,7 @@ button {
     height: 50px;
     border: none;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 50px;
     background-color: var(--white-alpha-25);
     border: 2px solid var(--white-alfa-40);
     display: flex;
@@ -400,7 +400,7 @@ button {
 }
 
 .header.active .nav {
-    visibility: visible;
+    visibility: hidden;
 }
 
 .header .nav-inner {
@@ -418,9 +418,9 @@ button {
     transition: all 0.3s ease;
 }
 
-.header.active .nav-inner {
+/* .header.active .nav-inner {
     opacity: 1;
-}
+} */
 
 .header .nav-inner ul {
     list-style: none;
@@ -449,4 +449,226 @@ button {
 .header .nav-inner ul li a:hover {
     color: #ffffff;
 
+}
+
+/* ------------home section------------ */
+.home-section {
+    padding: 120px 0;
+}
+
+.home-section.active {
+
+    display: flex;
+}
+
+.home-text,
+.home-img {
+
+    width: 50%;
+    padding: 15px;
+}
+
+.home-text p {
+
+    font-size: 18px;
+}
+
+.home-text h1 {
+
+    font-size: 40px;
+    text-transform: capitalize;
+}
+
+.home-text .btn {
+    margin: 0 15px 15px 0;
+}
+
+.home-text h2 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0 0 30px;
+}
+
+.home-img .img-box {
+    max-width: 360px;
+    background-color: var(--white-alpha-25);
+    border-radius: 50%;
+    border: 8px solid var(--white-alfa-40);
+    margin: auto;
+}
+
+.home-img .img-box img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+/* ----------about section ------------- */
+
+
+.about-img {
+    width: 40%;
+    padding: 15px;
+}
+
+.about-text {
+    width: 60%;
+    padding: 15px;
+}
+
+.about-img .img-box {
+
+    background-color: var(--white-alpha-25);
+    max-width: 380px;
+    border: 3px solid var(--white-alfa-40);
+    margin: auto;
+    border-radius: 10px;
+}
+
+.about-img .img-box img {
+    width: 100%;
+
+}
+
+.about-text h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+
+
+.about-text .skills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-text .skill-items {
+
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alfa-40);
+    padding: 5px 25px;
+    margin: 10px 10px 0;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.about-tabs .tab-item {
+    padding: 2px 0;
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0 30px 0 0;
+    position: relative;
+    orphans: .5;
+    transition: all .3s ease;
+    box-shadow: none;
+
+}
+
+/* time line adding section  */
+
+
+.about-tabs .tab-item:last-child {
+    margin: 0;
+}
+
+.about-tabs .tab-item::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: var(--blue-dark);
+    transition: width 0.3s ease;
+}
+
+.about-tabs .tab-item:hover::before {
+    width: 100%;
+}
+
+.about-tabs .tab-item.active::before {
+    width: 100%;
+    background-color: var(--main-color);
+}
+
+.about-tabs .tab-item.active {
+    color: var(--main-color);
+    opacity: 1;
+    cursor: auto;
+}
+
+.about-text .timeline {
+    position: relative;
+}
+
+
+.about-text .timeline::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: var(--main-color);
+    top: 0;
+    left: 5px;
+}
+
+.about-text .timeline-item::before {
+    content: '';
+    position: absolute;
+    height: 11px;
+    width: 11px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    top: 16px;
+    left: 0px;
+}
+
+
+
+
+.about-text .tab-content {
+    padding: 40px 0;
+    display: none;
+}
+
+.about-text .tab-content.active {
+    display: block;
+}
+
+.about-text .timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding: 10px 0 0 40px;
+}
+
+.about-text .timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.about-text .timeline-item .date {
+    display: block;
+    color: var(--main-color);
+    font-weight: 400;
+    margin: 0 0 10PX;
+}
+
+.about-text .timeline-item h4 {
+    font-size: 16px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+.about-text .timeline-item h4 span{
+    font-weight: bold;
+    color: var(--main-color);
 }
