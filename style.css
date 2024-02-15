@@ -668,7 +668,40 @@ button {
     text-transform: capitalize;
     margin: 0 0 10px;
 }
-.about-text .timeline-item h4 span{
+
+.about-text .timeline-item h4 span {
     font-weight: bold;
     color: var(--main-color);
 }
+
+/* ------portfolio section------------- */
+
+.portfolio-item {
+    width: calc((100%3) - 30px);
+    margin: 0 15px 30px;
+}
+
+
+.portfolio-item-detail {
+    display: none;
+}
+
+.portfolio-item-thumbnail {
+    padding: 10px;
+    background-color: var(--white-alpha-25);
+    border: 2px solid var(--white-alfa-40);
+    border-radius: 10px;
+}
+
+.portfolio-item-thumbnail img {
+    width: 100%;
+}
+
+.portfolio-item h3 {
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+
+
