@@ -44,7 +44,7 @@ tabsContainer.addEventListener('click', (e) => {
 
 // portifolio section 
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('view-project-btn')) {
+    if (e.target.classList.contains('portfolio-item-thumbnail')) {
         togglePortfolioPopup();
         portfolioItemDetail(e.target.parentElement)
     }
