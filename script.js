@@ -61,3 +61,4 @@ const portfolioItemDetail=(portfolioItem)=>{
     document.querySelector('.popup-header h3').innerHTML = portfolioItem.querySelector('.portfolio-item-title').innerHTML;
     document.querySelector('.popup-body').innerHTML = portfolioItem.querySelector('.portfolio-item-detail').innerHTML
 }
+

@@ -46,6 +46,7 @@ body.hide-scrolling {
 h1,
 h2 {
     font-weight: 600;
+    align-items: center;
 }
 
 h3.h4,
@@ -67,11 +68,13 @@ section {
     min-height: 90vh;
     display: none;
 }
-section.active{
+
+section.active {
     display: block;
     animation: fadeIn 0.5s ease-in-out forwards;
 }
-section.fade-out{
+
+section.fade-out {
     animation: fadeOut 0.5s ease-in-out forwards;
 }
 
@@ -737,10 +740,12 @@ button {
     border: 2px solid var(--white-alfa-40);
     border-radius: 10px;
     transition: transform 0.3s ease;
+    z-index: 2;
 }
 
 .portfolio-item-thumbnail img {
     width: 100%;
+    z-index: 1;
 }
 
 .portfolio-item:hover .portfolio-item-thumbnail {
@@ -958,6 +963,10 @@ button {
     .container {
         padding: 0;
     }
+    .header .nav-toggler {
+        width: 40px; 
+        height: 40px; 
+    }
 
     .home-text,
     .home-img {
@@ -971,7 +980,7 @@ button {
 
 
     .header {
-        top: 15%;
+        top: 0%;
         margin-right: -2rem;
     }
 
@@ -988,6 +997,11 @@ button {
 
 
 @media (max-width: 767px) {
+
+    .header .nav-toggler {
+        width: 35px; 
+        height: 35px; 
+    }
 
     .contact-form,
     .contact-info,
@@ -1015,6 +1029,15 @@ button {
 }
 
 @media (max-width: 575px) {
+    .header .nav-toggler {
+        width: 30px; 
+        height: 30px; 
+    }
+    .header .nav-toggler span {
+        margin: 10px 0;
+        height: 2px; 
+        width: 15px;  
+    }
     home-text h1 {
 
         font-size: 30px;
@@ -1025,6 +1048,6 @@ button {
     }
 
     .portfolio-item {
-        width: calc((100% / 1) 30px)
+        width: calc((100% / 1) - 30px);
     }
 }
