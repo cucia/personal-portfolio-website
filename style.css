@@ -587,6 +587,7 @@ button {
 .about-text .skills {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 0 30px;
 }
 
 .about-text .skill-items {
@@ -835,6 +836,7 @@ button {
 
 .popup-thumbnail img {
     border-radius: 10px;
+    width: 70%;
 }
 
 .popup-header h3 {
