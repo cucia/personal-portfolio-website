@@ -44,11 +44,13 @@ tabsContainer.addEventListener('click', (e) => {
 
 // portifolio section 
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('portfolio-item-thumbnail')) {
+    if (e.target.classList.contains('portfolio-item-thumbnail') || e.target.parentElement.classList.contains('portfolio-item-thumbnail')) {
+        // Check if the clicked element or its parent has the class 'portfolio-item-thumbnail'
         togglePortfolioPopup();
-        portfolioItemDetail(e.target.parentElement)
+        portfolioItemDetail(e.target.closest('.portfolio-item'));
     }
-})
+});
+
 const togglePortfolioPopup = () => {
     document.querySelector('.portfolio-popup').classList.toggle('open');
     document.body.classList.toggle('hide-scrolling');
