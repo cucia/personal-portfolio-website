@@ -67,7 +67,7 @@
             </div>
         </section>
         <!-- about section start  -->
-        <section class="about-section sec-padding" id="about">
+        <section class="about-section" id="about">
             <div class="container">
                 <div class="row">
                     <div class="section-title">
@@ -389,18 +389,18 @@
                 </div>
                 <div class="row">
                     <div class="contact-form">
-                        <form action="">
+                        <form id="contactForm" method="post" action="messages.php">
                             <div class="row">
                                 <div class="input-type">
-                                    <input type="text" placeholder="Name" class="input-control">
+                                    <input type="text" placeholder="Name" class="input-control" id="name" name="name">
                                 </div>
                                 <div class="input-type">
-                                    <input type="text" placeholder="Email" class="input-control">
+                                    <input type="text" placeholder="Email" class="input-control" id="email" name="email">
                                 </div>
                                 <div class="input-type">
-                                    <textarea name="Message" class="input-control"></textarea> 
+                                    <textarea placeholder="Message" class="input-control" id="message" name="message"></textarea>
                                 </div>
-                                <button type="button" class="btn">send message</button>
+                                <button type="submit" class="btn">send message</button>
                             </div>
                         </form>
                     </div>
